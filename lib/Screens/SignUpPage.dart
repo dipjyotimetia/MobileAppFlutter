@@ -17,6 +17,11 @@ class _SignUpPageState extends State<SignUpPage> {
         key: _formKey,
         child: formUI(),
       ),
+      decoration: BoxDecoration(
+          image: DecorationImage(
+        image: AssetImage("assets/images/Signup.png"),
+        fit: BoxFit.cover,
+      )),
     );
   }
 
