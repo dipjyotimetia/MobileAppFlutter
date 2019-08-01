@@ -3,13 +3,11 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-// Create a stateful widget
 class MyGetHttpData extends StatefulWidget {
   @override
   MyGetHttpDataState createState() => MyGetHttpDataState();
 }
 
-// Create the state for our stateful widget
 class MyGetHttpDataState extends State<MyGetHttpData> {
   final String url = "https://swapi.co/api/people";
   List data;
@@ -40,7 +38,7 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Retrieve JSON Data via HTTP GET"),
+        title: Text("Retrieve JSON Data from api"),
       ),
       // Create a Listview and load the data when available
       body: ListView.builder(
@@ -59,12 +57,20 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
                         data[index]['name'],
                         // set some style to text
                         style: TextStyle(
-                            fontSize: 20.0, color: Colors.lightBlueAccent),
+                            fontSize: 25.0, color: Colors.lightBlueAccent
+                        ),
                       ),
-                      // added padding
                       padding: const EdgeInsets.all(15.0),
                     ),
-                  )
+                  ),
+                  Card(
+                    child: Text(
+                      data[index]['homeworld'],
+                      style: TextStyle(
+                        fontSize: 15.0,color: Colors.red
+                      ),
+                    ),
+                  ),
                 ],
               )),
             );

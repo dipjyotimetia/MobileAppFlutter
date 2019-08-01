@@ -9,15 +9,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter First App',
-//      home: MyGetHttpData(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Signup'),
-        ),
-        body: SingleChildScrollView(
-          child: SignUpPage(),
-        ),
-      ),
+      home: MyGetHttpData(),
+//      home: Scaffold(
+//        appBar: AppBar(
+//          title: Text('Signup'),
+//        ),
+//        body: SingleChildScrollView(
+//          child: SignUpPage(),
+//        ),
+//      ),
     );
   }
 }
