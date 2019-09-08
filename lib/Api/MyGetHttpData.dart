@@ -17,7 +17,7 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
   // Function to get the JSON data
   Future<String> getJSONData() async {
     var response = await http.get(
-      // Encode the url
+        // Encode the url
         Uri.encodeFull(url),
         // Only accept JSON response
         headers: {"Accept": "application/json"});
@@ -49,24 +49,24 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
             return Container(
               child: Center(
                   child: Column(
-                    // Stretch the cards in horizontal axis
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Card(
-                        child: Container(
-                          child: Text(
-                            // Read the name field value and set it in the Text widget
-                            data[index]['name'],
-                            // set some style to text
-                            style: TextStyle(
-                                fontSize: 20.0, color: Colors.lightBlueAccent),
-                          ),
-                          // added padding
-                          padding: const EdgeInsets.all(15.0),
-                        ),
-                      )
-                    ],
-                  )),
+                // Stretch the cards in horizontal axis
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Card(
+                    child: Container(
+                      child: Text(
+                        // Read the name field value and set it in the Text widget
+                        data[index]['name'],
+                        // set some style to text
+                        style: TextStyle(
+                            fontSize: 20.0, color: Colors.lightBlueAccent),
+                      ),
+                      // added padding
+                      padding: const EdgeInsets.all(15.0),
+                    ),
+                  )
+                ],
+              )),
             );
           }),
     );
