@@ -19,9 +19,9 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/images/Signup.png"),
-        fit: BoxFit.cover,
-      )),
+            image: AssetImage("assets/images/Signup.png"),
+            fit: BoxFit.cover,
+          )),
     );
   }
 
