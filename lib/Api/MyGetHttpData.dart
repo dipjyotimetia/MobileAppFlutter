@@ -54,16 +54,22 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
                     children: <Widget>[
                       Card(
                         child: Container(
-                          child: Text(
-                            // Read the name field value and set it in the Text widget
-                            data[index]['name'],
-                            // set some style to text
+                          child: InkWell(
+                            child: Text(
+                              data[index]['name'],
                             style: TextStyle(
-                                fontSize: 20.0, color: Colors.lightBlueAccent),
+                                fontSize: 20.0, color: Colors.purple),
+                            ),
+                            splashColor: Colors.amber,
+                            onTap: () async {
+
+                            },
                           ),
                           // added padding
-                          padding: const EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.all(14.0),
                         ),
+                        borderOnForeground: true,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
                       )
                     ],
                   )),
