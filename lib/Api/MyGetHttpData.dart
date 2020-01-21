@@ -17,12 +17,8 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
   // Function to get the JSON data
   Future<String> getJSONData() async {
     var response = await http.get(
-      // Encode the url
         Uri.encodeFull(url),
-        // Only accept JSON response
         headers: {"Accept": "application/json"});
-
-    // Logs the response body to the console
     print(response.body);
 
     // To modify the state of the app, use this method
