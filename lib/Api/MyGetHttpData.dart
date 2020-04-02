@@ -57,13 +57,11 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
                           child: InkWell(
                             child: Text(
                               data[index]['name'],
-                            style: TextStyle(
-                                fontSize: 20.0, color: Colors.purple),
+                              style:
+                              TextStyle(fontSize: 20.0, color: Colors.purple),
                             ),
                             splashColor: Colors.amber,
-                            onTap: () async {
-
-                            },
+                            onTap: () async {},
                           ),
                           // added padding
                           padding: const EdgeInsets.all(14.0),
