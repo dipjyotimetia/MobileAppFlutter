@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
     if (value.isEmpty) {
       return 'Password field cannot be empty';
     }
-    if (value.length < 6) {
+    if (value.length < 8) {
       return 'Password length must be greater than 6';
     }
     return '';
